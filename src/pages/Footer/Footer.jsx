@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-blue-50">
       <div className="container pt-32 ">
-        <h2 className="text-[35px] font-bold text-violet-600">Digitall</h2>
+        <h2 className="text-[35px] font-bold text-violet-600">Softgroup</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-3 py-10 ">
           <div className="cursor-pointer">
             <h4 className="text-gray-800 text-[25px] font-medium">About us</h4>
@@ -59,18 +59,24 @@ const Footer = () => {
 
         <div className="flex  justify-between items-center py-5">
           <p className="text-violet-600 text-[16px] font-medium">
-            © 2024 Digitall All rights reserved
+            © 2024 Softgroup All rights reserved
           </p>
           <span className="flex justify-center items-center gap-4">
-            <span className="text-violet-200 p-5 rounded-full flex justify-center items-center">
-              <img src="/assets/icons/telegram.png" alt="telegram" />
+            <a href="https://t.me/Softgroup_uz">
+              <span className="text-violet-200 p-5 rounded-full flex justify-center items-center">
+                <img src="/assets/icons/telegram.png" alt="telegram" />
+              </span>
+            </a>
+           <a href="">
+           <span className="text-violet-200 p-5 rounded-full flex justify-center items-center">
+              <img src="/assets/icons/instagram.png" alt="instagram" />
             </span>
+           </a>
+            <a href="https://www.instagram.com/digitall_uz/">
             <span className="text-violet-200 p-5 rounded-full flex justify-center items-center">
-              <img src="/assets/icons/twitter.png" alt="twitter" />
+              <img src="/assets/icons/facebook.png" alt="Facebook" />
             </span>
-            <span className="text-violet-200 p-5 rounded-full flex justify-center items-center">
-              <img src="/assets/icons/youtube.png" alt="you tube" />
-            </span>
+            </a>
           </span>
         </div>
       </div>

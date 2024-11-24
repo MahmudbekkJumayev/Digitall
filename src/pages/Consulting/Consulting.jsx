@@ -15,35 +15,35 @@ const Consulting = () => {
                 increasing the efficiency of your company
               </p>
               <div className="grid grid-cols-3 gap-4">
-                <span className="rounded-lg bg-violet-50 p-5 ">
+                <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
                   <img src="/assets/icons/consulting1.svg" alt="" />
                   <p className="text-[16px] font-semibold text-gray-800">
                     Frontend
                   </p>
                 </span>
-                <span className="rounded-lg bg-violet-50 p-5 ">
-                  <img src="/assets/icons/consulting2.svg" alt="" />
+                <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
+                  <img color="vi" src="/assets/icons/consulting2.svg" alt="" />
                   <p className="text-[16px] font-semibold text-gray-800">
                     Backend
                   </p>
                 </span>
-                <span className="rounded-lg bg-violet-50 p-5 ">
+                <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
                   <img src="/assets/icons/optimization1.svg" alt="" />
                   <p className="text-[16px] font-semibold text-gray-800">
                     Architecture
                   </p>
                 </span>
-                <span className="rounded-lg bg-violet-50 p-5 ">
+                <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
                   <img src="/assets/icons/optimization5.svg" alt="" />
                   <p className="text-[16px] font-semibold text-gray-800">
                     DevOps
                   </p>
                 </span>
-                <span className="rounded-lg bg-violet-50 p-5 ">
+                <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
                   <img src="/assets/icons/consulting3.svg" alt="" />
                   <p className="text-[16px] font-semibold text-gray-800">UX/UI</p>
                 </span>
-                <span className="rounded-lg bg-violet-50 p-5 ">
+                <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
                   <img src="/assets/icons/consulting4.svg" alt="" />
                   <p className="text-[16px] font-semibold text-gray-800">QA</p>
                 </span>

@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed w-full shadow-md bg-white z-50">
       <div className="container flex justify-between  items-center py-5">
         <div>
-          <h2 className="text-[35px] font-bold text-violet-600">Digitall</h2>
+          <h2 className="text-[35px] font-bold text-violet-600">Softgroup</h2>
         </div>
         <div className="flex justify-between items-center gap-10">
           <ul
@@ -75,9 +75,7 @@ const Navbar = () => {
                 type="button"
                 className="bg-violet-600 border-none hover:bg-violet-900 px-4 py-2 rounded-md text-white text-[20px] font-bold"
               >
-              <a href="#contact">
-              Contact
-              </a>
+                Contact
               </button>
             </a>
           </div>
