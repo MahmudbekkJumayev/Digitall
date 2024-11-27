@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
+
+
+
     return (
         <div className="bg-blue-50">
             <div className="container pt-32 ">

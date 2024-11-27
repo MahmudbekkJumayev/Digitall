@@ -1,45 +1,61 @@
-import React, { useState } from "react";
+"use client";
 
+import axios from "axios";
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const telegramToken = "7385022476:AAEuDbLPJBCrHCQzuXDwQ-MzCb17ECk9-xE";
+  const chatId = "-1002428200529";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+
+    const message = `📝 *Yangi Xabar* 📝\n\n👤 *Ism:* ${formData.name}\n📧 *Email:* ${formData.email}\n📱 *Telefon:* ${formData.phone}\n💬 *Xabar:* ${formData.message}`;
 
     try {
-      const response = await fetch("/api/send-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await axios.post(
+        `https://api.telegram.org/bot${telegramToken}/sendMessage`,
+        {
+          chat_id: chatId,
+          text: message,
+          parse_mode: "Markdown",
+        }
+      );
 
-      const result = await response.json();
-
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus(result.error || "Failed to send message.");
+      if (res.status === 200) {
+        toast.success("Xabar muvaffaqiyatli yuborildi!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
       }
     } catch (error) {
-      setStatus("An error occurred while sending the message.");
+      toast.error(
+        "Xabar yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko‘ring."
+      );
+      console.error(error);
     }
   };
 
   return (
     <div id="contact" className="container mx-auto py-16 lg:py-24">
+      <ToastContainer position="top-right" autoClose={5000} />
       <h4 className="text-4xl text-violet-600 font-bold text-left mb-10">
         Contact Us
       </h4>
@@ -70,6 +86,15 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
+            <input
+              className="p-3 rounded-md border-2 border-gray-300"
+              placeholder="Phone number"
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
             <textarea
               className="p-3 rounded-md border-2 border-gray-300"
               placeholder="Briefly describe your project"
@@ -85,7 +110,6 @@ const Contact = () => {
             >
               Send
             </button>
-            {status && <p className="text-gray-700 mt-2">{status}</p>}
           </form>
         </div>
         <div className="w-full md:w-1/2 flex flex-col justify-start items-start p-5 md:p-10 gap-5">
