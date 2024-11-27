@@ -10,7 +10,7 @@ const Work = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 py-10">
                 <div className="flex flex-col justify-center items-center gap-3">
           <span>
-            <Image src="/assets/images/work1.svg" alt="icon" width={400} height={500}/>
+            <Image src="/assets/images/work1.svg" alt="icon" width={100} height={100}/>
           </span>
                     <h4 className="text-[25px] text-violet-600 font-bold">Contact</h4>
                     <p className="text-[15px] text-center font-medium text-gray-800">
@@ -19,7 +19,7 @@ const Work = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-3">
           <span>
-            <Image src="/assets/images/work2.svg" alt="icon" width={400} height={500}/>
+            <Image src="/assets/images/work2.svg" alt="icon" width={100} height={100}/>
           </span>
                     <h4 className="text-[25px] text-violet-600 font-bold">Analysis</h4>
                     <p className="text-[15px] text-center font-medium text-gray-800">
@@ -28,7 +28,7 @@ const Work = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-3">
           <span>
-            <Image src="/assets/images/work3.svg" alt="icon" width={400} height={500}/>
+            <Image src="/assets/images/work3.svg" alt="icon" width={100} height={100}/>
           </span>
                     <h4 className="text-[25px] text-violet-600 font-bold">Offer</h4>
                     <p className="text-[15px] text-center font-medium text-gray-800">
@@ -37,7 +37,7 @@ const Work = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-3">
           <span>
-            <Image src="/assets/images/work4.svg" alt="icon" width={400} height={500}/>
+            <Image src="/assets/images/work4.svg" alt="icon" width={100} height={100}/>
           </span>
                     <h4 className="text-[25px] text-violet-600 font-bold">Team</h4>
                     <p className="text-[15px] text-center font-medium text-gray-800">
@@ -46,7 +46,7 @@ const Work = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-3">
           <span>
-            <Image src="/assets/images/work5.svg" alt="icon" width={400} height={500}/>
+            <Image src="/assets/images/work5.svg" alt="icon" width={100} height={100}/>
           </span>
                     <h4 className="text-[25px] text-violet-600 font-bold">Start</h4>
                     <p className="text-[15px] text-center font-medium text-gray-800">
