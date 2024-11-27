@@ -45,7 +45,7 @@ const Navbar = () => {
             <li className="relative group p-4">
               <span className="flex justify-center items-center gap-2">
                 Language
-                <img src="/assets/icons/pastga.svg" alt="icon" />
+                <Image width={20} height={20} src="/assets/icons/pastga.svg" alt="icon" />
               </span>
               <div className="absolute p-2 bg-white hidden group-hover:block text-black mt-1 rounded-md shadow-lg">
                 {[
