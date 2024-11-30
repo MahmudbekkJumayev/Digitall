@@ -1,7 +1,5 @@
-"use client";
-
-import axios from "axios";
 import React, { useState } from "react";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -112,15 +110,15 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className="w-full md:w-1/2 flex flex-col justify-start items-start p-5 md:p-10 gap-5">
-          <div style={{ position: "relative", overflow: "hidden" }}>
+
+        {/* Map section */}
+        <div className="w-full md:w-1/2">
+          <div className=" w-full h-[100%]">
             <iframe
               src="https://yandex.uz/map-widget/v1/?l=night&ll=69.216012%2C41.234714&mode=search&oid=197913283981&ol=biz&rl=69.214078%2C41.234649&sctx=ZAAAAAgBEAAaKAoSCTyHMlTFvVlAEbudfeVBnkRAEhIJAAAAAICNb0ARUaT7OQXQWUAiBgABAgMEBSgKOABAkE5IAWoCdXqdAc3MzD2gAQCoAQC9AYTeFOvCAQaNm7Sk4QWCAhBQZHAgVW5pdmVyc2l0ZXRpigIAkgIAmgIMZGVza3RvcC1tYXBz&sll=69.216012%2C41.234714&sspn=0.044802%2C0.019713&text=Pdp%20Universiteti&z=15"
-              width="560"
-              height="400"
-              allowFullScreen={true}
-              style={{ position: "relative" }}
-            />
+              className=" inset-0 w-full h-full border-none"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
