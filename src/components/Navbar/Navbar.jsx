@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,24 +15,28 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
+  const navLinks = [
+    { name: "Home", href: "#header" },
+    { name: "Service", href: "#service" },
+    { name: "Consulting", href: "#consulting" },
+    { name: "Work", href: "#work" },
+  ];
+
   return (
     <nav className="fixed w-full shadow-md bg-white z-50">
       <div className="container flex justify-between  items-center py-5">
         <div>
-          <h2 className="text-[35px] font-bold text-violet-600">Softgroup</h2>
+          <Link href="/" className="text-[35px] font-bold text-violet-600">
+            <Image src="/logo.png" alt="" width={221} height={70} />
+          </Link>
         </div>
         <div className="flex justify-between items-center gap-10">
           <ul
             className={`lg:flex hidden gap-2 lg:flex-row lg:items-center text-[14px] md:text-[16px] font-medium list-none p-0 m-0 cursor-pointer`}
           >
-            {[
-              { name: "Home", href: "#header" },
-              { name: "Service", href: "#service" },
-              { name: "Consulting", href: "#consulting" },
-              { name: "Work", href: "#work" },
-            ].map((item) => (
+            {navLinks.map((item, i) => (
               <li
-                key={item.href}
+                key={i}
                 onClick={closeMenu}
                 className="relative group p-4 cursor-pointer"
               >
@@ -98,21 +103,12 @@ const Navbar = () => {
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <ul className="p-4">
-            {[
-              { name: "Home", href: "#header" },
-              { name: "Service", href: "#service" },
-              { name: "Consulting", href: "#consulting" },
-              { name: "Work", href: "#work" },
-            ].map((item) => (
-              <li
-                key={item.href}
-                onClick={closeMenu}
-                className="relative group p-4 cursor-pointer"
-              >
-                <a href={item.href}>{item.name}</a>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-transparent group-hover:bg-violet-600 transition-all duration-300"></span>
-              </li>
+          <ul className="flex flex-col p-6 gap-4">
+            {navLinks.map((item, i) => (
+              <Link href={item.href} key={i} onClick={closeMenu}
+              className="p-4 hover:border-b-2 border-b-2 hover:border-violet-600">
+                {item.name}
+              </Link>
             ))}
           </ul>
         </div>
