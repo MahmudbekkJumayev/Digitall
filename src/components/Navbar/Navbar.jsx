@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="container flex justify-between  items-center py-5">
         <div>
           <Link href="/" className="text-[35px] font-bold text-violet-600">
-            <Image src="/logo.png" alt="" width={221} height={70} />
+            <Image src="/logo.png" alt="" width={200} height={60} />
           </Link>
         </div>
         <div className="flex justify-between items-center gap-10">

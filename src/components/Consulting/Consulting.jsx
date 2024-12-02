@@ -9,13 +9,13 @@ const Consulting = () => {
           <h4 className="text-[40px] text-violet-600 font-bold text-start">
             IT Consulting
           </h4>
-          <div className="flex flex-col justify-center items-center md:flex-row gap-40 py-5">
+          <div className="flex flex-col justify-center items-center lg:flex-row gap-10 py-5">
             <div className="w-full md:w-1/2 flex flex-col gap-5">
               <p className="text-[16px] md:text-[20px] text-gray-800 font-medium">
                 We can improve the qualifications of your employees thereby
                 increasing the efficiency of your company
               </p>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 md:grid-3 gap-4">
                 <span className="rounded-lg bg-violet-50 p-5 transform transition-transform duration-300 hover:scale-105 cursor-pointer ">
                   <Image
                     width={60}
@@ -83,10 +83,10 @@ const Consulting = () => {
                 </span>
               </div>
             </div>
-            <div className="w-full md:w-1/2 p-10">
+            <div className="w-full bg-cover  h-[380px] lg:h-[400px] relative md:w-1/2 p-10">
               <Image
-                width={400}
-                height={300}
+                layout="fill"
+                objectFit="cover"
                 src="/assets/icons/consultingImg.svg"
                 alt=""
               />
