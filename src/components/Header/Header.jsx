@@ -7,7 +7,7 @@ import TypedText from "@/components/TypedText/TypedText";
 const Header = () => {
   return (
     // <header id="header" className=" object-cover" style={{ backgroundImage: "url('/assets/images/headerBg.svg')" }}>
-      <div className="py-10 md:py-40 lg:py-24 container flex flex-col lg:flex-row justify-between items-center">
+      <div id="header" className="py-10 md:py-40 lg:py-24 container flex flex-col lg:flex-row justify-between items-center">
         <div className="flex flex-col w-full md:w-1/2 gap-5  lg:max-w-none">
           <h2 className="text-[60px] font-bold text-violet-600">Softgroup</h2>
           <h2 className="text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px] font-bold text-gray-700">

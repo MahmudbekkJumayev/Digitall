@@ -57,12 +57,42 @@ const Contact = () => {
       <h4 className="text-4xl text-violet-600 font-bold text-left mb-10">
         Contact Us
       </h4>
-      <div className="shadow-xl bg-gray-100 p-10 flex flex-col md:flex-row justify-between items-center">
-        <div className="w-full md:w-1/2">
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-5 py-5 px-4 md:px-10"
-          >
+      <div className="shadow-xl bg-gray-100 gap-10 p-10 flex flex-col-reverse xl:flex-row justify-between">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-1 flex-col gap-5 px-4"
+        >
+          <input
+            className="p-3 rounded-md border-2 border-gray-300"
+            placeholder="Name"
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            className="p-3 rounded-md border-2 border-gray-300"
+            placeholder="Your email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            className="p-3 rounded-md border-2 border-gray-300"
+            placeholder="Briefly describe your project"
+            rows="5"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-violet-600 w-full border-none hover:bg-violet-900 px-8 py-2 rounded-md text-white text-lg font-bold"
+          />
             <p className="text-[16px] md:text-[18px] text-gray-800 font-medium">
               Leave us a message
             </p>
@@ -122,7 +152,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+   
   );
 };
 
